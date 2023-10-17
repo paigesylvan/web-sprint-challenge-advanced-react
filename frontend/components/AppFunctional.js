@@ -27,7 +27,7 @@ export default function AppFunctional(props) {
     if (index < 3) y = 1
     else if (index >= 3 && index < 6) y = 2
     else if (index >= 6 && index < 9) y = 3
-    return [x, y]
+    return [ x, y ]
 
   }
 
@@ -81,10 +81,10 @@ export default function AppFunctional(props) {
     
   
 
-  //function updateMessage(){
-  //  const message = getXYMessage()
-  //  setMessage(message)
- // }
+  function updateMessage(){
+    const message = getXYMessage()
+    setMessage(message)
+ }
   
   function onChange(evt) {
     // You will need this to update the value of the input.
@@ -107,7 +107,7 @@ export default function AppFunctional(props) {
 
     setEmail(initialEmail)
 
-    const [x, y] = getXY()
+    const [ x, y ] = getXY()
 
     const payload = {
       x,
@@ -136,7 +136,7 @@ export default function AppFunctional(props) {
 
   function gridMap() {
     return [0, 1, 2, 3, 4, 5, 6, 7, 8].map((idx) => (
-      <div key={idx} className={`square${idx === index ? 'active' : ''}`}>
+      <div key={idx} className={`square${idx === index ? ' active' : ''}`}>
         {idx === index ? 'B' : null}
       </div>
     ))

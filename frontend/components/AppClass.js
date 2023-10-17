@@ -15,7 +15,7 @@ export default class AppClass extends React.Component {
     this.state = { 
       message: initialMessage,
       email: initialEmail,
-      index: initialSteps,
+      index: initialIndex,
       steps: initialSteps,
       isEmailValid: emailValid,
     };
@@ -151,7 +151,7 @@ export default class AppClass extends React.Component {
     return [0, 1, 2, 3, 4, 5, 6, 7, 8].map((idx) => (
       <div 
       key={idx}
-      className={`square${idx === this.state.index ? 'active' : ''}`}
+      className={`square${idx === this.state.index ? ' active' : ''}`}
       >
         {idx === this.state.index ? 'B' : null}
       </div>
